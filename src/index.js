@@ -1,8 +1,13 @@
+import React from 'react'
 import ReactDom from 'react-dom';
 
-const el = document.getElementById('rooot')
+
+import Header from './components/Header/Header'
+import './index.css'
+
+const el = document.getElementById('root')
 ReactDom.render(
-    console.log("olá"),
+    <Header/>,
 
 el)
 
