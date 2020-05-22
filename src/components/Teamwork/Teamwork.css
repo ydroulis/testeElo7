@@ -9,18 +9,22 @@
 .ceo{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 50px;
+    padding: 0 50px 50px 50px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .ceo img{
-    max-width: 500px;
+    max-width: 450px;
     margin-right: 50px;
+    margin-top: 50px;
 }
 
 .ceo-content{
-    max-width: 450px;    
+    max-width: 400px; 
+    margin-top: 50px;   
 }
 
 .ceo-content h1{

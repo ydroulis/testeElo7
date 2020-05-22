@@ -1,10 +1,12 @@
 import React from 'react'
 import video from './img/placeholder-video.png'
+import Card from '../Card/Card'
+import './Teamwork.css'
 import imgCamila from './img/camila.png'
 import imgGuto from './img/guto.png'
 import imgDavid from './img/david.png'
 import imgBeatriz from './img/beatriz.png'
-import './Teamwork.css'
+
 
 export default Teamwork => {
     return (
@@ -19,12 +21,16 @@ export default Teamwork => {
             </section>
             <section className="team">
                 <h1>Conheça nosso time fora de série</h1>
-                <div className = "cards">
+                    <Card img={imgCamila}/>
+                    <Card img={imgGuto}/>
+                    <Card img={imgDavid}/>
+                    <Card img={imgBeatriz}/>
+                { /* <div className = "cards">
                     <div className="card"><a href="#"><img src={imgCamila} alt="Foto da Camila" /></a></div>
                     <div className="card"><a href="#"><img src={imgGuto} alt="foto do Guto" /></a></div>
                     <div className="card"><a href="#"><img src={imgDavid} alt="Foto do David" /></a></div>
                     <div className="card"><a href="#"><img src={imgBeatriz} alt="Foto da Beatriz" /></a></div>
-                </div>
+                </div>*/}
             </section>
         </article>
     )
