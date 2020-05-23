@@ -1,5 +1,5 @@
 .saibaMais{
-    max-width: 79%;
+    max-width: 80%;
     margin: 50px auto 0;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
 
 .saibaMais-card{
     flex-basis: 30%;
-    margin: 0 10px 20px 10px;
+    margin: 0 8px 20px 10px;
 }
 
 .saibaMais-card img{
