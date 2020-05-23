@@ -14,10 +14,10 @@ export default function Teamwork() {
             <Ceo/>
             <Team>
                 <div className = "cards">
-                    <Card img={imgCamila}/>
-                    <Card img={imgGuto}/>
-                    <Card img={imgDavid}/>
-                    <Card img={imgBeatriz}/>
+                    <Card img={imgCamila} alt = "Foto Camila"/>
+                    <Card img={imgGuto} alt = "Foto Guto"/>
+                    <Card img={imgDavid} alt = "Foto David"/>
+                    <Card img={imgBeatriz} alt = "Foto Beatriz"/>
                 </div>
             </Team>
         </article>
