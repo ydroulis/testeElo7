@@ -1,0 +1,15 @@
+.team{
+    max-width: 100%;
+    padding: 0 50px;
+    
+}
+
+.team h1{
+    min-width: 130px;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgb(119, 119, 119);
+}
