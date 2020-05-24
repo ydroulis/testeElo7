@@ -2,6 +2,7 @@ import React from 'react';
 import qualidade from './img/qualidade.png';
 import descontracao from './img/descontracao.png';
 import atividades from './img/atividades.png';
+import fotoBottom from './img/foto-bottom.png'
 import './SaibaMais.css'
 
 export default function SaibaMais(){
@@ -25,6 +26,7 @@ export default function SaibaMais(){
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, tellus vitae malesuada elementum, ex justo blandit orci, nec lacinia risus purus vel mi. In hac habitasse platea dictumst.</p>
             </div>
             <a href="#"><p>Saiba mais >></p></a>
+            <img src={fotoBottom} alt=""/>
         </section>
     )
 }

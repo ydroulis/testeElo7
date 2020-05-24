@@ -6,12 +6,14 @@
 
 .imgHeader{
     width: 99%;
-    height: 450px;
+    height: 30%;
     background-image: url('./img/foto-header.png');
     background-size: cover;
     margin: 0 auto 30px;
     padding-top: 300px;
+    padding-bottom: 50px;
     box-sizing: border-box;
+    background-position: center;
     
 }
 
