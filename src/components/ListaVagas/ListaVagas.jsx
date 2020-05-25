@@ -1,11 +1,81 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-export default class ListaVagas extends React.Component {
+
+function ListaVagas() {
+    const [vagas, setVagas] = useState([]);
+  
+    
+    useEffect(() => {
+      fetch("http://www.mocky.io/v2/5d6fb6b1310000f89166087b")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            setVagas(result.vagas);
+          },          
+        )
+    }, [])
+  
+   
+    const getPositions = () => {
+        return vagas.map((vaga, index) => {
+            if (!vaga.ativa) return null;
+            console.log(vaga)
+            //debugger
+            return(
+                <div key={index}>
+                    <div>{vaga.cargo}</div>
+                    <div>{vaga.localizacao? vaga.localizacao.bairro: "Remoto"}</div>
+                </div>
+            )
+        })
+    }
+
+    return (
+        <>
+            {getPositions()}
+        </>
+    )
+}
+
+export default ListaVagas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*export default class ListaVagas extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            lista: []
+            vagas: [],
         };
     }
     componentDidMount() {
@@ -14,25 +84,40 @@ export default class ListaVagas extends React.Component {
             .then(
                 (result) => {
                     this.setState({
-                        lista: result.vagas
+                        vagas: result.vagas,
+
                     });
                 }
             )
     }
 
     render() {
-        const { lista } = this.state;
+        const { vagas } = this.state
 
-        return (
-            <React.Fragment>
-                <h2>Desenvolvimento</h2>
+        const formatLocallizacao = (localizacao) =>{
+            return (
                 <div>
-                    {lista.map(item => (
-                        <p>{item.cargo}</p>
-                    ))}
+                    `${localizacao.bairro} - ${localizacao.cidade}, ${localizacao.pais}`
                 </div>
-            </React.Fragment>
-        );
+            )
+        }
 
+        const getPositions = () => {
+            return vagas.map((vaga, index) => {
+                if (!vaga.ativa) return null;
+
+                return (
+                    <div key={index}>
+                        {vaga.cargo}
+                        <div>{vaga.localizacao.bairro}</div>
+                    </div>
+                )
+            })
+            
+        }
+        export default getPositions    
     }
+
+    
 }
+*/
