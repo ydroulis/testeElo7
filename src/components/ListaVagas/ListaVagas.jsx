@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './ListaVagas.css'
 
 
 function ListaVagas() {
@@ -23,8 +24,14 @@ function ListaVagas() {
             //debugger
             return(
                 <div key={index}>
-                    <div>{vaga.cargo}</div>
-                    <div>{vaga.localizacao? vaga.localizacao.bairro: "Remoto"}</div>
+                    <div className = 'itemLista'>
+                        <a className = "vaga" href={vaga.link}>{vaga.cargo}</a>
+                        <span className = 'localizacao'>{
+                            vaga.localizacao? 
+                            vaga.localizacao.bairro + ' - ' + vaga.localizacao.cidade + ', ' + vaga.localizacao.pais: "Remoto"
+                            }</span>
+                    </div>
+                    
                 </div>
             )
         })
@@ -32,6 +39,7 @@ function ListaVagas() {
 
     return (
         <>
+            <h2 className = "titulo">Desenvolvimento</h2>
             {getPositions()}
         </>
     )
